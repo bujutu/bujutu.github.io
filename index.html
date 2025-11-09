@@ -1,59 +1,108 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Bujutu</title>
-    <link rel="stylesheet" href="stylesheet.css">
-  </head>
-  <body>
-    <div class="header">
-      <div class="header-logo">Bujutu</div>
-      <div class="header-list">
-        <ul>
-          <li>今日の一言</li>
-          <li>今月の一言</li>
-          <li>今年の一言</li>
-        </ul>
-      </div>
-    </div>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bujutuのWebアプリ紹介</title>
+  <meta name="description" content="支払い方法によるポイント還元率を比較できるWebアプリ『toku-com』の紹介ページです。">
+  <style>
+    body {
+      font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      background: #f9f9fb;
+      color: #333;
+    }
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2563eb;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1.5rem;
+      color: #666;
+    }
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>bujutuのWebアプリ紹介</h1>
+  </header>
 
-    <div class="main">
-      <div class="copy-container">
-        <h1>今日が最高の日でありますように<span>。</span></h1>
-        <h2>今をより良くしよう</h2>
-      </div>
+  <main>
+    <h2>支払い方法の還元率比較アプリ「toku-com」</h2>
+    <p>
+      <strong>お得コンパス（得コン）</strong> は、さまざまなキャッシュレス決済の
+      <b>ポイント還元率を比較できる</b> Webアプリです。<br>
+      「どの支払い方法が今いちばんお得か？」を簡単にチェックできます。
+    </p>
 
-      <div class="contents">
-        <h3 class="section-title">勇気づけられた一言</h3>
-      </div>
+    <p>
+      このアプリはブラウザだけで動作し、スマートフォンやPCから無料で利用できます。<br>
+      使い方ページやプライバシーポリシーも整備しており、安心してご利用いただけます。
+    </p>
 
-      <div class="contact-form">
-        <h3 class="section-title">お問い合わせ</h3>
-        <p>メールアドレス（必須）</p>
+    <p style="text-align: center;">
+      <a href="https://bujutu.github.io/toku-com/" target="_blank" class="button">
+        アプリを開く（得コンへ）
+      </a>
+    </p>
 
-        <input>
-        <input type="" name="" id="" value="" />
+    <hr style="margin: 2rem 0;">
 
-        <p>お問い合わせ内容（必須）</p>
+    <h2>このサイトについて</h2>
+    <p>
+      このページは bujutu が制作するWebアプリ群の紹介用テストページです。
+    </p>
 
-        <textarea></textarea>
+    <ul>
+      <li><a href="https://bujutu.github.io/toku-com/privacypolicy.html">プライバシーポリシー</a></li>
+      <li><a href="https://forms.gle/V4uRRyNumz2XvtGB6">お問い合わせ</a></li>
+    </ul>
+  </main>
 
-        <p>※必須項目は必ずご入力ください</p>
-
-        <input class="contact-submit" type="submit" name="" id="" value="送信" />
-
-      </div>
-    </div>
-
-    <div class="footer">
-      <div class="footer-logo">Bujutu</div>
-      <div class="footer-list">
-        <ul>
-          <li>協力</li>
-          <li>コンセプト</li>
-          <li>お問い合わせ</li>
-        </ul>
-      </div>
-    </div>
-  </body>
+  <footer>
+    &copy; 2025 bujutu. All rights reserved.
+  </footer>
+</body>
 </html>
