@@ -1,87 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXVWSQGHXH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-VXVWSQGHXH');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bujutuのWebアプリ紹介</title>
-  <meta name="description" content="便利なツールの紹介ページです。">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8868204174419750"
-     crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
-      line-height: 1.8;
-      margin: 0;
-      background: #f9f9fb;
-      color: #333;
-    }
-    header {
-      background: #2563eb;
-      color: #ffffff;
-      padding: 1.2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #2563eb;
-      text-align: center;
-    }
-    p {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 1.5rem;
-      color: #666;
-    }
-    .button {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 0.5rem;
-      margin-top: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-    .button:hover {
-      background: #1d4ed8;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>bujutuのWebアプリ紹介</h1>
-  </header>
-
-  <main>
-    <!-- トクコム -->
+---
+layout: default
+title: ホーム
+---
+<div class="home">
+<h1>bujutuの宇宙</h1>
+  <!-- トクコム -->
     <h2>支払い方法の還元率比較「トクコム」</h2>
     <p>
       <strong>お得コンパス（トクコム）</strong> は、さまざまなキャッシュレス決済の
@@ -123,14 +46,17 @@
       このページは bujutu が制作するWebアプリ群の紹介用テストページです。
     </p>
 
-    <ul>
-      <li><a href="https://bujutu.github.io/toku-com/privacypolicy.html">プライバシーポリシー</a></li>
-      <li><a href="https://forms.gle/V4uRRyNumz2XvtGB6">お問い合わせ</a></li>
-    </ul>
-  </main>
+  
+<p>ヘッダー・フッター・サイドバーは layout: default によって自動で適用されます。</p>
 
-  <footer>
-    &copy; 2025 bujutu. All rights reserved.
-  </footer>
-</body>
-</html>
+
+<h2>最新記事</h2>
+<ul>
+{% for post in site.posts %}
+<li>
+<a href="{{ post.url }}">{{ post.title }}</a>
+<span>（{{ post.date | date: "%Y-%m-%d" }}）</span>
+</li>
+{% endfor %}
+</ul>
+</div>
