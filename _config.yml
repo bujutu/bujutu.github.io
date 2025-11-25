@@ -1,0 +1,18 @@
+# サイト基本設定
+name: "bujutuの宇宙"
+url: "https://bujutu.github.io"
+baseurl: ""
+
+
+# マークダウン設定
+markdown: kramdown
+theme: minima
+
+
+# Webアプリを除外（toku-com は Jekyll に触らせない）
+exclude:
+- toku-com
+
+
+# 記事URL形式を分かりやすく
+permalink: /posts/:year/:month/:day/:title/
