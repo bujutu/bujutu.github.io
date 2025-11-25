@@ -1,0 +1,74 @@
+/* ベース */
+body {
+margin: 0;
+font-family: system-ui, sans-serif;
+line-height: 1.7;
+background: #f9f9f9;
+color: #333;
+}
+
+
+.wrapper {
+display: flex;
+max-width: 1200px;
+margin: auto;
+padding: 20px;
+}
+
+
+/* ヘッダー */
+.site-header {
+background: #222;
+color: #fff;
+padding: 15px;
+}
+.site-header .inner {
+max-width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.site-title {
+color: #fff;
+text-decoration: none;
+font-size: 1.6rem;
+font-weight: bold;
+}
+.site-nav a {
+color: #fff;
+margin-left: 15px;
+text-decoration: none;
+}
+
+
+/* サイドメニュー */
+.sidebar {
+width: 280px;
+background: #fff;
+padding: 20px;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+height: fit-content;
+}
+.sidebar a {
+text-decoration: none;
+color: #333;
+}
+.sidebar h3 {
+margin-top: 0;
+}
+
+
+/* メインコンテンツ */
+.main-content {
+flex: 1;
+margin-left: 20px;
+background: #fff;
+padding: 20px;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+/* フッター */
+.site-footer {
+background: #222;
