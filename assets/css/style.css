@@ -20,8 +20,8 @@ body {
    ヘッダー
 =========================== */
 .site-header {
-  background: #222;
-  color: #fff;
+  background: #1855a8;
+  color: white;
   padding: 15px;
 }
 .site-header .inner {
@@ -83,7 +83,7 @@ body {
    フッター
 =========================== */
 .site-footer {
-  background: #222;
+  background: #1855a8;
   color: #fff;
   text-align: center;
   padding: 15px;
