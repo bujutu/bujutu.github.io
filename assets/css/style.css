@@ -92,6 +92,12 @@ body {
   font-size: 14px;
 }
 
+@media (min-width:750px){
+   #mobile-sidebar{
+      display: none;
+   }
+}
+
 /* ===========================
    スマホ対応（max-width:768px）
 =========================== */
