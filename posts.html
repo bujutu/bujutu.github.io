@@ -1,0 +1,14 @@
+---
+layout: default
+title: 記事一覧
+---
+<h1>記事一覧</h1>
+<ul class="article-list">
+  {% for post in site.posts %}
+  <li class="mb-4 border-b pb-2">
+    <a href="{{ post.url }}" class="text-xl font-semibold text-blue-700 hover:underline">{{ post.title }}</a>
+    <p class="text-sm text-gray-600">{{ post.date | date: "%Y-%m-%d" }}</p>
+    <p class="text-gray-800">{{ post.excerpt }}</p>
+  </li>
+  {% endfor %}
+</ul>
