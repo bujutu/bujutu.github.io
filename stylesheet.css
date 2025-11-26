@@ -106,23 +106,52 @@ input, textarea{
     float: right;
 }
 
+.site-nav {
+    display: flex;
+    gap: 15px;
+}
+
 /* スマホ用 */
 @media (max-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 0;
-        right: -250px; /* 初期は画面外 */
-        width: 250px;
-        height: 100%;
-        background-color: #f8f8f8;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
+  .site-nav {
+      display: block; /* サイドバー内で縦並び */
+  }
+  
+  .menu-button {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+  }
 
-    .sidebar.open {
-        right: 0;
-    }
+  .site-header .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+  }
+  .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px; /* 初期は画面外 */
+      width: 250px;
+      height: 100%;
+      background-color: #f8f8f8;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      padding: 20px;
+  }
+
+  .sidebar.open {
+      right: 0;
+  }
+  
+  .close-button {
+      font-size: 24px;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 20px;
+  }
 
     .overlay {
         position: fixed;
