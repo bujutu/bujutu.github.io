@@ -1,74 +1,168 @@
-/* ベース */
+/* ===========================
+   ベース
+=========================== */
 body {
-margin: 0;
-font-family: system-ui, sans-serif;
-line-height: 1.7;
-background: #f9f9f9;
-color: #333;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.7;
+  background: #f9f9f9;
+  color: #333;
 }
-
 
 .wrapper {
-display: flex;
-max-width: 1200px;
-margin: auto;
-padding: 20px;
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-
-/* ヘッダー */
+/* ===========================
+   ヘッダー
+=========================== */
 .site-header {
-background: #222;
-color: #fff;
-padding: 15px;
+  background: #222;
+  color: #fff;
+  padding: 15px;
 }
 .site-header .inner {
-max-width: 1200px;
-margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .site-title {
-color: #fff;
-text-decoration: none;
-font-size: 1.6rem;
-font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
+
+/* ハンバーガーメニューは初期非表示（PC用） */
+.menu-button {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ヘッダーナビ（PC用） */
 .site-nav a {
-color: #fff;
-margin-left: 15px;
-text-decoration: none;
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
-
-/* サイドメニュー */
+/* ===========================
+   サイドメニュー（PC）
+=========================== */
 .sidebar {
-width: 280px;
-background: #fff;
-padding: 20px;
-box-shadow: 0 0 5px rgba(0,0,0,0.1);
-height: fit-content;
+  width: 280px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  height: fit-content;
 }
 .sidebar a {
-text-decoration: none;
-color: #333;
+  text-decoration: none;
+  color: #333;
 }
 .sidebar h3 {
-margin-top: 0;
+  margin-top: 0;
 }
 
-
-/* メインコンテンツ */
+/* ===========================
+   メインコンテンツ
+=========================== */
 .main-content {
-flex: 1;
-margin-left: 20px;
-background: #fff;
-padding: 20px;
-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  flex: 1;
+  margin-left: 20px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-
-/* フッター */
+/* ===========================
+   フッター
+=========================== */
 .site-footer {
-background: #222;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ===========================
+   スマホ対応（max-width:768px）
+=========================== */
+@media (max-width: 768px) {
+
+  /* ハンバーガーメニューを表示 */
+  .menu-button {
+    display: block;
+  }
+
+  /* ヘッダー内のナビは非表示 */
+  .site-nav {
+    display: none;
+  }
+
+  /* サイドバーをオーバーレイ式に */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* 初期は画面外 */
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  .sidebar .close-button {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .sidebar a {
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  /* オーバーレイ */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 900;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  /* メインコンテンツはマージンなしで広く表示 */
+  .wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
