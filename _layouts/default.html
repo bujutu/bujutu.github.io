@@ -10,7 +10,9 @@
 <body>
   {% include header.html %}
   <div class="wrapper">
-  {% include sidebar.html %}
+    <div class="sidebar-desktop">
+      {% include sidebar.html %}
+    </div>
   <main class="main-content">
   {{ content }}
   </main>
