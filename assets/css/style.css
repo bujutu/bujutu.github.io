@@ -112,7 +112,7 @@ body {
   .sidebar {
     position: fixed;
     top: 0;
-    right: -250px; /* 初期は画面外 */
+    right: -300px; /* 初期は画面外 */
     width: 250px;
     height: 100%;
     padding: 20px;
