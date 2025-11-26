@@ -38,9 +38,7 @@ body {
   font-weight: bold;
 }
 
-/* ハンバーガーメニューは初期非表示（PC用） */
 .menu-button {
-  display: none;
   font-size: 24px;
   cursor: pointer;
 }
@@ -96,18 +94,15 @@ body {
    #mobile-sidebar{
       display: none;
    }
+   .menu-button {
+      display: none;
+   } 
 }
 
 /* ===========================
    スマホ対応（max-width:768px）
 =========================== */
 @media (max-width: 768px) {
-
-  /* ハンバーガーメニューを表示 */
-  .menu-button {
-    display: block;
-  }
-
   /* ヘッダー内のナビは非表示 */
   .site-nav {
     display: none;
