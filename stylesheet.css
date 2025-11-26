@@ -100,3 +100,61 @@ input, textarea{
 .footer-list li {
   padding-bottom: 20px;
 }
+
+.sidebar {
+    width: 250px;
+    float: right;
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -250px; /* 初期は画面外 */
+        width: 250px;
+        height: 100%;
+        background-color: #f8f8f8;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        right: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+        z-index: 900;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .menu-button {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    footer {
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
