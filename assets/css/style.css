@@ -122,6 +122,9 @@ body {
    .menu-button {
       display: none;
    } 
+   .sidebar-desktop{
+      display: block;
+   }
 }
 
 /* ===========================
@@ -135,6 +138,9 @@ body {
   .site-nav {
     display: none;
   }
+   .sidebar-desktop{
+      display: none;
+   }
    
   .sidebar .close-button {
     font-size: 24px;
