@@ -1,3 +1,7 @@
+# サイトマップ作成
+plugins:
+  - jekyll-sitemap
+
 # サイト基本設定
 name: "bujutuの宇宙"
 url: "https://bujutu.github.io"
