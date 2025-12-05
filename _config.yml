@@ -1,6 +1,11 @@
-# サイトマップ作成
+# サイトマップ自動生成
 plugins:
   - jekyll-sitemap
+
+# RSS/Atom自動生成
+plugins:
+  - jekyll-feed
+
 
 # サイト基本設定
 name: "bujutuの宇宙"
