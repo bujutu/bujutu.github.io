@@ -1,0 +1,31 @@
+---
+title: "PayPay × 自治体キャンペーン（自動更新）"
+layout: post
+date: {{ generated_at }}
+description: "PayPayと自治体の大規模還元キャンペーン一覧（自動更新）。"
+tags: [paypay, 自治体, キャンペーン, 自動更新]
+---
+
+> 最終更新: **{{ generated_at }}**
+
+PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧化しています。  
+高還元キャンペーンはすぐ終わることがあるため、最新情報は必ず公式ページもご確認ください。
+
+---
+
+{% if campaigns|length == 0 %}
+現在取得できるキャンペーンはありません。
+{% else %}
+{% for c in campaigns %}
+## {{ c.title }}
+
+- **自治体**: {{ c.municipality or "不明" }}
+- **期間**: {{ c.start or "未記載" }} 〜 {{ c.end or "未記載" }}
+- **還元率**: {{ c.rate or "不明" }}
+- **備考**: {{ c.note or "特記事項なし" }}
+
+---
+{% endfor %}
+{% endif %}
+
+> ※本記事は自動生成されています。
