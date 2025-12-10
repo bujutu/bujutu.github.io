@@ -2,35 +2,32 @@ name: Update PayPay Campaigns
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 毎日0時
+    - cron: "0 9 * * *"   # JST 18:00に相当（必要に応じて調整）
   workflow_dispatch:
 
-permissions:
-  contents: write      # GitHub Actions から push を許可
-
 jobs:
-  update:
+  scrape_and_update:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests jinja2
+        run: pip install -r requirements.txt
 
-      - name: Update markdown
+      - name: Run scraper
         run: python scripts/update_campaigns.py
 
-      - name: Commit & Push
+      - name: Commit and push changes
         run: |
-          git config --global user.name "GitHub Actions"
+          git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Update PayPay campaigns" || exit 0
+          git add _posts/paypay-campaigns.md
+          git commit -m "Auto-update PayPay campaigns" || echo "No changes to commit"
           git push
