@@ -89,11 +89,11 @@ def render_markdown(campaigns):
     with open(TEMPLATE_PATH, encoding="utf-8") as f:
         template = Template(f.read())
 
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     rendered = template.render(
         campaigns=campaigns,
-        now=now
+        generated_at=generated_at   #変数名をテンプレに合わせる
     )
 
     with open(POST_PATH, "w", encoding="utf-8") as f:
