@@ -6,7 +6,7 @@ from jinja2 import Template
 
 BASE_URL = "https://paypay.ne.jp/event/support-local/"
 
-POST_PATH = "_posts/paypay-campaigns.md"
+POST_PATH = "_posts/2025-12-10-paypay-campaigns.md"
 TEMPLATE_PATH = "scripts/template_paypay_post.md.j2"
 
 
