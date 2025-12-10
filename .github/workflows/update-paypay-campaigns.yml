@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add _posts/paypay-campaigns.md
+          git add _posts/2025-12-10-paypay-campaigns.md
           git commit -m "Auto-update PayPay campaigns" || echo "No changes to commit"
           git push
