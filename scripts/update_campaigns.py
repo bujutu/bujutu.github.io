@@ -7,7 +7,7 @@ from jinja2 import Template
 BASE_URL = "https://paypay.ne.jp/event/support-local/"
 
 POST_PATH = "_posts/paypay-campaigns.md"
-TEMPLATE_PATH = "scripts/template_post.md.j2"
+TEMPLATE_PATH = "scripts/template_paypay_post.md.j2"
 
 
 def extract_rate(text):
