@@ -7,12 +7,8 @@ plugins:
   - jekyll-feed
 
 # 目次作成
-plugins:
-  - jekyll-toc
-toc:
-  min_level: 2
-  max_level: 4
-  no_toc_section_class: "no-toc"
+kramdown:
+  parse_block_html: true
 
 
 # サイト基本設定
