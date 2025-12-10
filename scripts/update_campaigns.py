@@ -1,85 +1,103 @@
-#!/usr/bin/env python3
-import os
-import sys
-import json
-from datetime import datetime
 import requests
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from bs4 import BeautifulSoup
+import re
+from datetime import datetime
+from jinja2 import Template
 
-DEFAULT_API = "https://www.paypay.ne.jp/opa-api/campaign/list/"
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_URL = "https://paypay.ne.jp/event/support-local/"
 
-def fetch_campaigns(api_url):
+POST_PATH = "_posts/paypay-campaigns.md"
+TEMPLATE_PATH = "scripts/template_post.md.j2"
+
+
+def extract_rate(text):
+    """
+    「66.50％付与」などの「数字＋％付与」を探し、数字を返す。
+    """
+    pattern = r"(\d+(?:\.\d+)?)\s*％付与"
+    m = re.search(pattern, text)
+    return m.group(1) + "%" if m else "不明"
+
+
+def get_campaign_rate(detail_url):
+    """
+    自治体ページにアクセスし、「％付与」直前の数字を抽出する。
+    """
     try:
-        resp = requests.get(api_url, timeout=15)
-        resp.raise_for_status()
-        return resp.json()
-    except Exception as e:
-        print(f"Error fetching: {e}", file=sys.stderr)
-        return None
+        html = requests.get(detail_url, timeout=10).text
+        rate = extract_rate(html)
+        return rate
+    except Exception:
+        return "不明"
 
-def normalize(item):
-    return {
-        "title": item.get("title") or item.get("campaignName") or "",
-        "municipality": item.get("municipality") or item.get("city") or "",
-        "start": item.get("startDate") or "",
-        "end": item.get("endDate") or "",
-        "rate": item.get("paybackRate") or "",
-        "note": item.get("note") or "",
-        "raw": item
-    }
 
-def extract_campaigns(api_json):
-    if api_json is None:
-        return []
-    if isinstance(api_json, dict):
-        for k in ["campaigns", "items", "data", "result", "campaignList"]:
-            if k in api_json and isinstance(api_json[k], list):
-                return [normalize(i) for i in api_json[k]]
-    if isinstance(api_json, list):
-        return [normalize(i) for i in api_json]
-    return []
+def fetch_campaigns():
+    """
+    メインページから自治体キャンペーンを抽出
+    """
+    html = requests.get(BASE_URL).text
+    soup = BeautifulSoup(html, "html.parser")
 
-def main():
-    api_url = os.environ.get("PAYPAY_API_URL", DEFAULT_API)
+    rows = soup.select("tr.supportLocal__row")
 
-    # Jekyll 形式の固定記事ファイル
-    output_path = os.path.join(
-        os.path.dirname(SCRIPT_DIR),
-        "_posts",
-        "2025-12-05-paypay-campaigns.md"
-    )
+    campaigns = []
 
-    template_path = os.path.join(SCRIPT_DIR, "template_post.md.j2")
+    for row in rows:
+        link_tag = row.select_one("a.supportLocal__link")
+        if not link_tag:
+            continue
 
-    print("Fetching PayPay campaigns...")
-    data = fetch_campaigns(api_url)
-    campaigns = extract_campaigns(data)
+        url = link_tag.get("href")
+        if not url.startswith("https://paypay.ne.jp/event/"):
+            continue
 
-    env = Environment(
-        loader=FileSystemLoader(os.path.dirname(template_path)),
-        autoescape=select_autoescape([])
-    )
-    template = env.get_template(os.path.basename(template_path))
+        # 1. 自治体名の抽出（スペースがあれば前半だけ）
+        full_name = link_tag.text.strip()
+        name = full_name.split(" ")[0]
 
-    content = template.render(
+        # 2. 状態（開催中 or 開催予定）
+        status_tag = row.select_one(".supportLocal__label--green")
+        if not status_tag:
+            status = "不明"
+        else:
+            status = status_tag.text.strip()
+
+        # 3. 期間
+        date_tag = row.select_one("p.supportLocal__date")
+        period = date_tag.text.strip() if date_tag else "不明"
+
+        # 4. 還元率抽出
+        rate = get_campaign_rate(url)
+
+        campaigns.append({
+            "name": name,
+            "status": status,
+            "period": period,
+            "rate": rate,
+            "url": url
+        })
+
+    return campaigns
+
+
+def render_markdown(campaigns):
+    """
+    Jinja2でMarkdownを生成
+    """
+    with open(TEMPLATE_PATH, encoding="utf-8") as f:
+        template = Template(f.read())
+
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    rendered = template.render(
         campaigns=campaigns,
-        generated_at=datetime.now().isoformat()
+        now=now
     )
 
-    # 旧内容と比較して変化なければコミットしない
-    if os.path.exists(output_path):
-        old = open(output_path, "r", encoding="utf-8").read()
-        if old == content:
-            print("No changes detected.")
-            return
-
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(content)
-
-    print("Updated:", output_path)
+    with open(POST_PATH, "w", encoding="utf-8") as f:
+        f.write(rendered)
 
 
 if __name__ == "__main__":
-    main()
+    campaigns = fetch_campaigns()
+    render_markdown(campaigns)
