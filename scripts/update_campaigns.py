@@ -12,7 +12,7 @@ TEMPLATE_PATH = "scripts/template_post.md.j2"
 
 def extract_rate(text):
     """
-    「66.50％付与」などの「数字＋％付与」を探し、数字を返す。
+    「数字＋％付与」を探し、数字を返す。
     """
     pattern = r"(\d+(?:\.\d+)?)\s*％付与"
     m = re.search(pattern, text)
@@ -28,7 +28,7 @@ def get_campaign_rate(detail_url):
         rate = extract_rate(html)
         return rate
     except Exception:
-        return "不明"
+        return "要確認"
 
 
 def fetch_campaigns():
@@ -48,7 +48,9 @@ def fetch_campaigns():
             continue
 
         url = link_tag.get("href")
-        if not url.startswith("https://paypay.ne.jp/event/"):
+        if ((not url.startswith("https://paypay.ne.jp/event/") \
+            and not url.startswith("https://paypay.ne.jp/notice/")) \
+            or "voucher" in url):
             continue
 
         # 1. 自治体名の抽出（スペースがあれば前半だけ）
@@ -58,7 +60,7 @@ def fetch_campaigns():
         # 2. 状態（開催中 or 開催予定）
         status_tag = row.select_one(".supportLocal__label--green")
         if not status_tag:
-            status = "不明"
+            status = "開催中"
         else:
             status = status_tag.text.strip()
 
