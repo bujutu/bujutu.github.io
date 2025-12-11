@@ -16,7 +16,7 @@ def extract_rate(text):
     """
     pattern = r"(\d+(?:\.\d+)?)\s*％付与"
     m = re.search(pattern, text)
-    return m.group(1) + "%" if m else "不明"
+    return m.group(1) + "%" if m else "要確認"
 
 
 def get_campaign_rate(detail_url):
