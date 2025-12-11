@@ -1,103 +1,66 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-date: 2025-12-10
+date: 2025-12-11 04:50:53
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
 
-> 最終更新: 2025/12/10
+> 最終更新: **2025-12-11 04:50:53**
 
 PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧化しています。  
 高還元キャンペーンはすぐ終わることがあるため、最新情報は必ず公式ページもご確認ください。
 
+
 {% include toc.html %}
 
----
-
-
-
-## 上山市
-
-- **状態**: 開催中
-- **期間**: 2025/10/10 〜 12/31
-- **還元率**: 10%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/yamagata-kaminoyama-city-20251010/)
 
 ---
 
-## 鹿沼市
 
-- **状態**: 開催中
-- **期間**: 2025/12/6 〜 12/26
-- **還元率**: 20%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/tochigi-kanuma-city-20251206/)
+{% if campaigns | length == 0 %}
+現在取得できるキャンペーンはありません。
+{% else %}
 
----
+# 開催中
 
-## 足利市
+{% assign now_list = campaigns | where: "status", "開催中" %}
 
-- **状態**: 開催予定
-- **期間**: 2026/1/5 〜 1/31
-- **還元率**: 不明
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251114/cp-jichitai/)
+{% if now_list.size == 0 %}
+現在「開催中」のキャンペーンはありません。
+{% else %}
+{% for item in now_list %}
+## {{ item.name }}
 
----
-
-## 君津市
-
-- **状態**: 開催中
-- **期間**: 2025/11/1 〜 12/31
-- **還元率**: 10%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/chiba-kimitsu-city-20251101/)
+- **状態**: {{ item.status }}
+- **期間**: {{ item.period }}
+- **還元率**: {{ item.rate }}
+- **公式ページ**: [リンク]({{ item.url }})
 
 ---
+{% endfor %}
+{% endif %}
 
-## 練馬区
+# 開催予定
 
-- **状態**: 開催中
-- **期間**: 2025/12/1 〜 12/31
-- **還元率**: 10%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/tokyo-nerima-city-20251201/)
+{% assign upcoming_list = campaigns | where: "status", "開催予定" %}
 
----
+{% if upcoming_list.size == 0 %}
+現在「開催予定」のキャンペーンはありません。
+{% else %}
+{% for item in upcoming_list %}
+## {{ item.name }}
 
-## 大田区
-
-- **状態**: 開催予定
-- **期間**: 2026/1/7 〜 1/31
-- **還元率**: 不明
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251114/cp-jichitai/)
-
----
-
-## 岐阜市
-
-- **状態**: 開催中
-- **期間**: 2025/11/26 〜 12/25
-- **還元率**: 20%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/gihu-gihu-city-20251126/)
+- **状態**: {{ item.status }}
+- **期間**: {{ item.period }}
+- **還元率**: {{ item.rate }}
+- **公式ページ**: [リンク]({{ item.url }})
 
 ---
+{% endfor %}
+{% endif %}
 
-## 枚方市
-
-- **状態**: 開催予定
-- **期間**: 2026/1/5 〜 2/1
-- **還元率**: 不明
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251128/cp-jichitai/)
-
----
-
-## 山都町
-
-- **状態**: 開催予定
-- **期間**: 2026/1/5 〜 1/31
-- **還元率**: 不明
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251128/cp-jichitai/)
-
----
-
+{% endif %}
 
 
 ※本記事は自動生成されています。
