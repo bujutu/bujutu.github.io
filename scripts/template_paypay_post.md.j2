@@ -15,7 +15,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 ---
 
-{% if campaigns|length == 0 %}
+{% raw %}
+{% if campaigns | length == 0 %}
 現在取得できるキャンペーンはありません。
 {% else %}
 
@@ -58,5 +59,6 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 {% endif %}
 
 {% endif %}
+{% endraw %}
 
 ※本記事は自動生成されています。
