@@ -123,6 +123,7 @@ body {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin-bottom: 1em;
+  box-sizing: border-box; /* パディングを含めて幅計算 */
 }
 .scroll-table-wrapper table {
   border-collapse: collapse;
@@ -142,6 +143,11 @@ body {
 .main-content {
   overflow-x: hidden;
 }
+/* flex 子がコンテンツ幅に引っ張られて親をはみ出すのを防ぐ */
+.main-content {
+  min-width: 0; /* ← 重要：flex子が縮むことを許可する */
+}
+
 
 /* ===========================
    フッター
