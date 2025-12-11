@@ -118,7 +118,8 @@ body {
 }
 
 /* テーブルスクロール */
-.scroll-table-wrapper {
+.scroll-table-wrapper {   
+  width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin-bottom: 1em;
@@ -136,6 +137,10 @@ body {
 .scroll-table-wrapper th {
   background: #f3f3f3; /* 見出し行の薄いグレー */
   font-weight: bold;
+}
+.wrapper,
+.main-content {
+  overflow-x: hidden;
 }
 
 /* ===========================
