@@ -119,13 +119,27 @@ body {
 }
 
 /* テーブルスクロール */
-.table-scroll {
-  overflow-x: auto !important;
+.scroll-table-wrapper {
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  width: 100%;
+  margin-bottom: 1em;
 }
-.table-scroll table {
-  min-width: 800px; /* 必要に応じて調整 */
+
+.scroll-table-wrapper table {
+  border-collapse: collapse;
+  min-width: 600px;  /* 横スクロールを発生させる */
+}
+
+.scroll-table-wrapper th,
+.scroll-table-wrapper td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.scroll-table-wrapper th {
+  background: #f3f3f3; /* 見出し行の薄いグレー */
+  font-weight: bold;
 }
 
 /* ===========================
