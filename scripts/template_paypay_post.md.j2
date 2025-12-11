@@ -18,7 +18,15 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 {% if campaigns|length == 0 %}
 現在取得できるキャンペーンはありません。
 {% else %}
-{% for item in campaigns %}
+
+# 開催中
+
+{% assign now_list = campaigns | where: "status", "開催中" %}
+
+{% if now_list.size == 0 %}
+現在「開催中」のキャンペーンはありません。
+{% else %}
+{% for item in now_list %}
 ## {{ item.name }}
 
 - **状態**: {{ item.status }}
@@ -28,6 +36,27 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 ---
 {% endfor %}
+{% endif %}
+
+# 開催予定
+
+{% assign upcoming_list = campaigns | where: "status", "開催予定" %}
+
+{% if upcoming_list.size == 0 %}
+現在「開催予定」のキャンペーンはありません。
+{% else %}
+{% for item in upcoming_list %}
+## {{ item.name }}
+
+- **状態**: {{ item.status }}
+- **期間**: {{ item.period }}
+- **還元率**: {{ item.rate }}
+- **公式ページ**: [リンク]({{ item.url }})
+
+---
+{% endfor %}
+{% endif %}
+
 {% endif %}
 
 ※本記事は自動生成されています。
