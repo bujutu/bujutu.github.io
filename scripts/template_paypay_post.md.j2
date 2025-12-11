@@ -11,25 +11,14 @@ tags: [paypay, 自治体, キャンペーン, 自動更新]
 PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧化しています。  
 高還元キャンペーンはすぐ終わることがあるため、最新情報は必ず公式ページもご確認ください。
 
-{% raw %}
 {% include toc.html %}
-{% endraw %}
 
 ---
 
-{% raw %}
-{% if campaigns | length == 0 %}
+{% if campaigns|length == 0 %}
 現在取得できるキャンペーンはありません。
 {% else %}
-
-# 開催中
-
-{% assign now_list = campaigns | where: "status", "開催中" %}
-
-{% if now_list.size == 0 %}
-現在「開催中」のキャンペーンはありません。
-{% else %}
-{% for item in now_list %}
+{% for item in campaigns %}
 ## {{ item.name }}
 
 - **状態**: {{ item.status }}
@@ -40,27 +29,5 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 ---
 {% endfor %}
 {% endif %}
-
-# 開催予定
-
-{% assign upcoming_list = campaigns | where: "status", "開催予定" %}
-
-{% if upcoming_list.size == 0 %}
-現在「開催予定」のキャンペーンはありません。
-{% else %}
-{% for item in upcoming_list %}
-## {{ item.name }}
-
-- **状態**: {{ item.status }}
-- **期間**: {{ item.period }}
-- **還元率**: {{ item.rate }}
-- **公式ページ**: [リンク]({{ item.url }})
-
----
-{% endfor %}
-{% endif %}
-
-{% endif %}
-{% endraw %}
 
 ※本記事は自動生成されています。
