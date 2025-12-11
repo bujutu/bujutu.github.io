@@ -106,9 +106,7 @@ body {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-/* ===========================
-   目次
-=========================== */
+/* 目次 */
 .post-nav-links {
   border: 1px solid #000000;
   background-color: #f5f5f5;
@@ -118,6 +116,16 @@ body {
 .post-nav-links h4 {
   font-weight: bold;
   text-align: center;
+}
+
+/* テーブルスクロール */
+.table-scroll {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+.table-scroll table {
+  min-width: 800px; /* 必要に応じて調整 */
 }
 
 /* ===========================
