@@ -1,10 +1,6 @@
-# サイトマップ自動生成
 plugins:
-  - jekyll-sitemap
-
-# RSS/Atom自動生成
-plugins:
-  - jekyll-feed
+  - jekyll-feed # RSS/Atom自動生成
+  - jekyll-sitemap # サイトマップ自動生成
 
 # 目次作成
 kramdown:
