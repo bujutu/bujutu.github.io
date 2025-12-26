@@ -98,6 +98,10 @@ body {
 /* ===========================
    メインコンテンツ
 =========================== */
+.date {
+  color: #888;
+  font-size: 0.9em;
+}
 .main-content {
   flex: 1;
   margin-left: 20px;
