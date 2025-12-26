@@ -1,6 +1,7 @@
 plugins:
   - jekyll-feed # RSS/Atom自動生成
   - jekyll-sitemap # サイトマップ自動生成
+  - jekyll-last-modified-at # 最終更新日表示
 
 # 目次作成
 kramdown:
