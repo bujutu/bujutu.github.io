@@ -1,0 +1,35 @@
+name: Generate sitemap index
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate sitemap_index.xml
+        run: |
+          BASE_URL="https://bujutu.github.io"
+
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap_index.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap_index.xml
+
+          find . -name "*.html" \
+            -not -path "./_site/*" \
+            -not -path "./.git/*" | while read f; do
+              URL="${BASE_URL}/${f#./}"
+              echo "  <url><loc>${URL}</loc></url>" >> sitemap_index.xml
+          done
+
+          echo '</urlset>' >> sitemap_index.xml
+
+      - name: Commit sitemap_index.xml
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add sitemap_index.xml
+          git commit -m "Auto update sitemap_index.xml" || true
+          git push
