@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2025-12-29 09:26:41
+last_modified_at: 2025-12-30 09:21:32
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -57,8 +57,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/1/5 〜 1/31
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251114/cp-jichitai/)
+- **還元率**: 15%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/tochigi-ashikaga-city-20260105/)
 
 ---
 
@@ -111,8 +111,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/1/5 〜 2/1
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251128/cp-jichitai/)
+- **還元率**: 15%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/osaka-hirakata-city/)
 
 ---
 
@@ -129,8 +129,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/1/5 〜 1/31
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20251128/cp-jichitai/)
+- **還元率**: 20%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/kumamoto-yamato-town-20260105/)
 
 ---
 
