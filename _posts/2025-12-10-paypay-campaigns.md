@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-02-01 09:27:06
+last_modified_at: 2026-02-02 09:42:45
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -95,15 +95,6 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 - **期間**: 2026/2/1 〜 2/28
 - **還元率**: 10%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/aichi-ama-city-20260201/)
-
----
-
-## 枚方市
-
-- **状態**: 開催中
-- **期間**: 2026/1/5 〜 2/1
-- **還元率**: 15%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/osaka-hirakata-city/)
 
 ---
 
