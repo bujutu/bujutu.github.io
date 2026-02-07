@@ -1,6 +1,7 @@
 ---
 layout: post
 title: なんとなく怖いNISAの話を、ちゃんと整理する
+categories: [finance]
 ---
 こんにちは！
 「NISAって正直よくわからないし、怖い」これを克服する一助になれば幸いです。
