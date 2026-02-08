@@ -1,21 +1,9 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-02-07 09:26:54
+last_modified_at: 2026-02-08 09:26:25
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
-categories:
-  - cashless
-tags:
-  - PayPay
-  - キャッシュレス決済
-  - ポイント還元
-  - キャンペーン
-  - QRコード決済
-  - スマホ決済
-  - 還元率
-  - 節約
-  - 自治体
-  - 自動更新
+tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
 
 PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧化しています。  
