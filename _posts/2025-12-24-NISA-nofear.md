@@ -1,7 +1,17 @@
 ---
 layout: post
 title: なんとなく怖いNISAの話を、ちゃんと整理する
-categories: [finance]
+categories:
+  - finance
+tags:
+  - NISA
+  - 新NISA
+  - 資産形成
+  - 投資初心者
+  - 投資不安
+  - 長期投資
+  - 積立投資
+  - 金融リテラシー
 ---
 こんにちは！
 「NISAって正直よくわからないし、怖い」これを克服する一助になれば幸いです。
