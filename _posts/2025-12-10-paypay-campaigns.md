@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-02-15 09:27:08
+last_modified_at: 2026-02-16 09:49:49
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -16,15 +16,6 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 ---
 
 
-
-## 当別町
-
-- **状態**: 開催中
-- **期間**: 2026/2/1 〜 2/15
-- **還元率**: 15%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/hokkaido-tobetsu-town-20260201/)
-
----
 
 ## 十和田市
 
