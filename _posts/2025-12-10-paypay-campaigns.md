@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-02-27 09:36:24
+last_modified_at: 2026-02-28 09:22:25
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
