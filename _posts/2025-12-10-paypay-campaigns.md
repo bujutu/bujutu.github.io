@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-03-09 09:43:59
+last_modified_at: 2026-03-10 09:39:23
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -64,7 +64,7 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 ## 富岡市
 
-- **状態**: 開催予定
+- **状態**: 開催中
 - **期間**: 2026/3/10 〜 4/30
 - **還元率**: 15%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/gunma-tomioka-city-20260310/)
