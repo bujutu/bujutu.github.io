@@ -152,6 +152,25 @@ body {
   min-width: 0; /* ← 重要：flex子が縮むことを許可する */
 }
 
+/* ===========================
+   パンくずリスト
+=========================== */
+.breadcrumb {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  font-weight: bold;
+  color: #000;
+}
+
 
 /* ===========================
    フッター
