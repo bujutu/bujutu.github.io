@@ -2,17 +2,48 @@
 layout: default
 ---
 <article class="post">
-<h1>{{ page.title }}</h1>
 
-<p class="date">
-公開日：{{ page.date | date: "%Y-%m-%d" }}
-{% assign pub = page.date | date: "%Y-%m-%d" %}
-{% assign mod = page.last_modified_at | date: "%Y-%m-%d" %}
-{% if page.last_modified_at and mod != pub %}
-（最終更新：{{ page.last_modified_at | date: "%Y-%m-%d" }}）
-{% endif %}
-</p>
+  {% assign category_names = 
+  "cashless:キャッシュレス決済,creditcard:クレジットカード,overseas:海外・為替,finance:資産形成・金融知識" 
+  | split: "," %}
 
+  {% if page.categories %}
+    {% assign main_category = page.categories[0] %}
+    {% assign category_label = main_category %}
+
+    {% for item in category_names %}
+      {% assign pair = item | split: ":" %}
+      {% if pair[0] == main_category %}
+        {% assign category_label = pair[1] %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
   
-{{ content }}
+  <nav class="breadcrumb">
+    <a href="/">ホーム</a>
+  
+    {% if page.categories %}
+      {% assign main_category = page.categories[0] %}
+      &gt; 
+      <a href="/categories/{{ main_category }}/">
+        {{ main_category }}
+      </a>
+    {% endif %}
+  
+    &gt; 
+    <span>{{ page.title }}</span>
+  </nav>
+  <h1>{{ page.title }}</h1>
+  
+  <p class="date">
+  公開日：{{ page.date | date: "%Y-%m-%d" }}
+  {% assign pub = page.date | date: "%Y-%m-%d" %}
+  {% assign mod = page.last_modified_at | date: "%Y-%m-%d" %}
+  {% if page.last_modified_at and mod != pub %}
+  （最終更新：{{ page.last_modified_at | date: "%Y-%m-%d" }}）
+  {% endif %}
+  </p>
+  
+    
+  {{ content }}
 </article>
