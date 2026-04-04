@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-04-03 09:48:48
+last_modified_at: 2026-04-04 09:33:24
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -50,15 +50,6 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 - **期間**: 2026/4/1 〜 4/21
 - **還元率**: 20%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/ibaraki-ishioka-city-20260401/)
-
----
-
-## 富岡市
-
-- **状態**: 開催中
-- **期間**: 2026/3/10 〜 4/3
-- **還元率**: 15%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/gunma-tomioka-city-20260310/)
 
 ---
 
