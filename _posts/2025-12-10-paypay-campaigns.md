@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-05-11 12:07:05
+last_modified_at: 2026-05-12 11:17:24
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -19,7 +19,7 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 ## 北上市
 
-- **状態**: 開催予定
+- **状態**: 開催中
 - **期間**: 2026/5/12 〜 5/31
 - **還元率**: 20%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/iwate-kitakami-city-20260512/)
