@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-05-25 12:24:45
+last_modified_at: 2026-05-28 12:22:18
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -30,8 +30,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/6/1 〜 7/31
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260415/cp-jichitai/)
+- **還元率**: 20%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/iwate-tono-city/)
 
 ---
 
@@ -66,8 +66,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/6/1 〜 6/30
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260415/cp-jichitai/)
+- **還元率**: 25%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/saitama-kawaguchi-city-20260601/)
 
 ---
 
@@ -84,8 +84,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/6/1 〜 7/10
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260424/cp-jichitai/)
+- **還元率**: 20%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/tokyo-suginami-city-20260601/)
 
 ---
 
@@ -102,8 +102,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/6/1 〜 6/30
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260415/cp-jichitai/)
+- **還元率**: 10%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/aichi-kiyosu-city-20260601/)
 
 ---
 
@@ -111,17 +111,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/6/1 〜 6/30
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260424/cp-jichitai/)
-
----
-
-## 諫早市
-
-- **状態**: 開催中
-- **期間**: 2026/5/1 〜 5/25
-- **還元率**: 30%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/nagasaki-isahaya-city/)
+- **還元率**: 20%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/mie-matsusaka-city-20260601/)
 
 ---
 
@@ -129,8 +120,8 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 
 - **状態**: 開催予定
 - **期間**: 2026/6/1 〜 6/30
-- **還元率**: 要確認
-- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260415/cp-jichitai/)
+- **還元率**: 30%
+- **公式ページ**: [リンク](https://paypay.ne.jp/event/kagoshima-satsuma-town-20260601/)
 
 ---
 
