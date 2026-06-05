@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-06-04 11:48:28
+last_modified_at: 2026-06-05 11:58:50
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -77,6 +77,15 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 - **期間**: 2026/5/20 〜 6/19
 - **還元率**: 20%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/kanagawa-sagamihara-city-20260520/)
+
+---
+
+## 神奈川県
+
+- **状態**: 開催予定
+- **期間**: 2026/6/19 〜
+- **還元率**: 要確認
+- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260515/cp-jichitai/)
 
 ---
 
