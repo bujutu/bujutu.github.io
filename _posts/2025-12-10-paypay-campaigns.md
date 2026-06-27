@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-06-26 11:41:57
+last_modified_at: 2026-06-27 10:54:55
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -16,15 +16,6 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 ---
 
 
-
-## 遠野市
-
-- **状態**: 開催中
-- **期間**: 2026/6/1 〜 6/26
-- **還元率**: 20%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/iwate-tono-city/)
-
----
 
 ## 奥州市
 
