@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-06-29 13:02:28
+last_modified_at: 2026-06-30 11:41:53
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -95,6 +95,15 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 - **期間**: 2026/6/1 〜 6/30
 - **還元率**: 20%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/mie-matsusaka-city-20260601/)
+
+---
+
+## 松原市
+
+- **状態**: 開催予定
+- **期間**: 2026/8/1 〜 9/30
+- **還元率**: 要確認
+- **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260630/cp-jichitai/)
 
 ---
 
