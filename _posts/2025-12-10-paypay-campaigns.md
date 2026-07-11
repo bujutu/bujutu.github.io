@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-07-10 11:46:25
+last_modified_at: 2026-07-11 10:11:24
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -50,15 +50,6 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 - **期間**: 2026/8/7 〜 8/30
 - **還元率**: 要確認
 - **公式ページ**: [リンク](https://paypay.ne.jp/notice/20260615/cp-jichitai/)
-
----
-
-## 杉並区
-
-- **状態**: 開催中
-- **期間**: 2026/6/1 〜 7/10
-- **還元率**: 20%
-- **公式ページ**: [リンク](https://paypay.ne.jp/event/tokyo-suginami-city-20260601/)
 
 ---
 
