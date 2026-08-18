@@ -1,7 +1,7 @@
 ---
 title: "PayPay × 自治体キャンペーン（自動更新）"
 layout: post
-last_modified_at: 2026-08-17 09:35:26
+last_modified_at: 2026-08-18 09:26:43
 description: "PayPayと自治体のポイント還元キャンペーン一覧（自動更新）。"
 tags: [paypay, 自治体, キャンペーン, 自動更新]
 ---
@@ -110,7 +110,7 @@ PayPay × 自治体 の還元キャンペーン情報を自動収集し、一覧
 ## 松原市
 
 - **状態**: 開催中
-- **期間**: 2026/8/1 〜 9/30
+- **期間**: 2026/8/1 〜 8/25
 - **還元率**: 20%
 - **公式ページ**: [リンク](https://paypay.ne.jp/event/osaka-matsubara-city/)
 
