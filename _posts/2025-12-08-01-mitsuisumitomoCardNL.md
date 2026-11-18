@@ -106,7 +106,7 @@ NL（ナンバーレス）の名の通り、カード本体には
 ぜひ活用して、無駄なくお得をゲットしてください！
 
 ▼ トクコムはこちら  
-[https://bujutu.github.io/toku-com/](https://bujutu.github.io/toku-com/)
+[https://tokucom.jp/](https://tokucom.jp/)
 
 
 三井住友カード（NL）は、無料で持てて毎日の支払いがお得になる非常に優秀なカードです。  
